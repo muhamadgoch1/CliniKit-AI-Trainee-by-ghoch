@@ -1,0 +1,10 @@
+{
+  "title": "Medical Appointment No Shows",
+  "owner": "JoniHoppen",
+  "kaggle_id": "joniarroba/noshowappointments",
+  "url": "https://www.kaggle.com/datasets/joniarroba/noshowappointments",
+  "license_reported_by_kaggle_api": "CC BY-NC-SA 4.0",
+  "records_reported": 110527,
+  "downloaded_for_analysis_utc": "2026-09-12",
+  "note": "CliniKit did not supply the dataset mentioned in its assessment. This public dataset was substituted and must be disclosed."
+}

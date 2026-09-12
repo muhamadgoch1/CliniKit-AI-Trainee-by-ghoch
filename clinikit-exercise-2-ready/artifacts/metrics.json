@@ -1,0 +1,190 @@
+{
+  "data_audit": {
+    "raw_rows": 110527,
+    "clean_rows": 110521,
+    "removed_rows": 6,
+    "removed_invalid_date": 0,
+    "removed_invalid_age": 1,
+    "removed_negative_wait": 5,
+    "duplicate_rows": 0,
+    "missing_values_raw": {},
+    "class_counts": {
+      "0": 88207,
+      "1": 22314
+    },
+    "no_show_rate": 0.2018982817745044,
+    "date_min": "2016-04-29",
+    "date_max": "2016-06-08"
+  },
+  "temporal_split": {
+    "train": {
+      "rows": 63532,
+      "start": "2016-04-29",
+      "end": "2016-05-19",
+      "no_show_rate": 0.2094692438456211
+    },
+    "validation": {
+      "rows": 20539,
+      "start": "2016-05-20",
+      "end": "2016-05-31",
+      "no_show_rate": 0.20078874336627878
+    },
+    "test": {
+      "rows": 26450,
+      "start": "2016-06-01",
+      "end": "2016-06-08",
+      "no_show_rate": 0.18457466918714555
+    }
+  },
+  "validation_model_comparison_at_0.5": {
+    "dummy_most_frequent": {
+      "threshold": 0.5,
+      "accuracy": 0.7992112566337212,
+      "precision_no_show": 0.0,
+      "recall_no_show": 0.0,
+      "f1_no_show": 0.0,
+      "roc_auc": 0.5,
+      "pr_auc": 0.20078874336627878,
+      "confusion_matrix": [
+        [
+          16415,
+          0
+        ],
+        [
+          4124,
+          0
+        ]
+      ]
+    },
+    "logistic_regression": {
+      "threshold": 0.5,
+      "accuracy": 0.6136618141097424,
+      "precision_no_show": 0.3003666841278156,
+      "recall_no_show": 0.6951988360814743,
+      "f1_no_show": 0.41948935547589433,
+      "roc_auc": 0.6787471419796837,
+      "pr_auc": 0.3014949383790598,
+      "confusion_matrix": [
+        [
+          9737,
+          6678
+        ],
+        [
+          1257,
+          2867
+        ]
+      ]
+    },
+    "random_forest": {
+      "threshold": 0.5,
+      "accuracy": 0.5752957787623545,
+      "precision_no_show": 0.3032765848233382,
+      "recall_no_show": 0.8596023278370514,
+      "f1_no_show": 0.44836526908240054,
+      "roc_auc": 0.7294849758019224,
+      "pr_auc": 0.3381164271366762,
+      "confusion_matrix": [
+        [
+          8271,
+          8144
+        ],
+        [
+          579,
+          3545
+        ]
+      ]
+    }
+  },
+  "selection_rule": "Highest validation PR-AUC excluding dummy baseline",
+  "selected_model": "random_forest",
+  "threshold_rule": "Validation threshold maximizing F2 (recall weighted 2x)",
+  "selected_threshold": 0.3375725462445529,
+  "untouched_test_metrics": {
+    "threshold": 0.3375725462445529,
+    "accuracy": 0.4968998109640832,
+    "precision_no_show": 0.2602856655095886,
+    "recall_no_show": 0.936911102007374,
+    "f1_no_show": 0.40739256290358494,
+    "roc_auc": 0.7200016646568208,
+    "pr_auc": 0.3203044735040735,
+    "confusion_matrix": [
+      [
+        8569,
+        12999
+      ],
+      [
+        308,
+        4574
+      ]
+    ]
+  },
+  "test_classification_report": {
+    "attended": {
+      "precision": 0.9653035935563816,
+      "recall": 0.39730155786350146,
+      "f1-score": 0.5629167350960749,
+      "support": 21568.0
+    },
+    "no_show": {
+      "precision": 0.2602856655095886,
+      "recall": 0.936911102007374,
+      "f1-score": 0.40739256290358494,
+      "support": 4882.0
+    },
+    "accuracy": 0.4968998109640832,
+    "macro avg": {
+      "precision": 0.6127946295329851,
+      "recall": 0.6671063299354377,
+      "f1-score": 0.4851546489998299,
+      "support": 26450.0
+    },
+    "weighted avg": {
+      "precision": 0.835175142716138,
+      "recall": 0.4968998109640832,
+      "f1-score": 0.5342109124630414,
+      "support": 26450.0
+    }
+  },
+  "top_features": [
+    {
+      "feature": "waiting_days",
+      "importance": 0.6572081274419058
+    },
+    {
+      "feature": "age",
+      "importance": 0.08271850422322262
+    },
+    {
+      "feature": "neighbourhood",
+      "importance": 0.0797004828166894
+    },
+    {
+      "feature": "sms_received",
+      "importance": 0.06769476847855381
+    },
+    {
+      "feature": "scheduled_hour",
+      "importance": 0.051516979019946445
+    },
+    {
+      "feature": "appointment_weekday",
+      "importance": 0.0268187707789768
+    },
+    {
+      "feature": "gender",
+      "importance": 0.011268334261816455
+    },
+    {
+      "feature": "hypertension",
+      "importance": 0.008784091204348574
+    },
+    {
+      "feature": "scholarship",
+      "importance": 0.007175500117391435
+    },
+    {
+      "feature": "diabetes",
+      "importance": 0.002735955481650181
+    }
+  ]
+}

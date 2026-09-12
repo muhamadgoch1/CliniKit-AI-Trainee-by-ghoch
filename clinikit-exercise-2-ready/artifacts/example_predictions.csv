@@ -1,0 +1,4 @@
+age,waiting_days,scheduled_hour,scholarship,hypertension,diabetes,alcoholism,handicap,sms_received,gender,neighbourhood,appointment_weekday,actual_no_show,predicted_probability,predicted_no_show
+61,176,14,0,1,0,0,0,1,Female,MARUÍPE,Wednesday,1,0.5199401101547058,1
+18,35,15,0,0,0,0,0,1,Female,SANTO ANDRÉ,Monday,1,0.6577594214684981,1
+27,0,20,0,0,0,0,0,0,Female,JARDIM CAMBURI,Wednesday,0,0.26660106774098186,0

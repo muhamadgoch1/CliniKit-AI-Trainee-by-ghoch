@@ -1,0 +1,9 @@
+test_cleaning_and_target (test_project.ProjectTests.test_cleaning_and_target) ... ok
+test_metrics_are_reproducible_shape (test_project.ProjectTests.test_metrics_are_reproducible_shape) ... ok
+test_prediction_artifact (test_project.ProjectTests.test_prediction_artifact) ... ok
+test_temporal_boundaries_do_not_overlap (test_project.ProjectTests.test_temporal_boundaries_do_not_overlap) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.563s
+
+OK
